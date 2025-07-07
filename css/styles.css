@@ -1,0 +1,151 @@
+@page {
+  size: A4;
+  margin: 1.5cm;
+}
+
+@media print {
+  body {
+    background: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .container {
+    box-shadow: none;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  direction: rtl;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 210mm;  /* A4 width */
+  min-height: 297mm;  /* A4 height */
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  box-shadow: 0 0 10px #ccc;
+  margin: auto;
+  padding: 0;
+}
+
+.left {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 30px 25px;
+}
+
+.right {
+  padding: 30px 45px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 6px solid orange;
+  margin: auto;
+  background: #ddd url('../images/1.png') no-repeat center/cover;
+}
+
+h1 {
+  font-size: 20px;
+  color: orange;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+
+.left .box {
+  margin-bottom: 20px;
+}
+
+.left .box-title {
+  background-color: #444;
+  padding: 10px;
+  font-weight: bold;
+  border-left: 5px solid orange;
+  margin-bottom: 10px;
+}
+
+.left ul, .right ul {
+  padding-right: 15px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.left li, .right li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.lang-bar {
+  background-color: #ccc;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.lang-fill {
+  height: 100%;
+  background-color: orange;
+}
+
+/* ✅ استجابة للشاشات الصغيرة (Responsive Design) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+  }
+
+  .left, .right {
+    padding: 20px;
+  }
+
+  .photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .left .box-title {
+    font-size: 14px;
+  }
+
+  .left li, .right li {
+    font-size: 13px;
+  }
+}
