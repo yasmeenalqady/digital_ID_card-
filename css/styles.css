@@ -1,3 +1,11 @@
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./fonts/Cairo-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @page {
   size: A4;
   margin: 1.5cm;
@@ -14,13 +22,16 @@
     box-shadow: none;
   }
 }
-
 body {
   margin: 0;
-  font-family: Tahoma, sans-serif;
+  font-family: 'Cairo';
+  line-height: 1.8;
+
   direction: rtl;
+  font-size: 18px; /* حجم الخط تم تكبيره من 14px إلى 16px */
   background-color: #f4f4f4;
 }
+
 
 .container {
   width: 210mm;  /* A4 width */
